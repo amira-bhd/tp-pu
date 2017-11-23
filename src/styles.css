@@ -669,6 +669,13 @@ Author URI: http://bootstrapthemes.co
        line-height: 6rem;
        margin:0px 0px 60px 0px;
    }	
+   .main_slider .main_slider_content h5{
+    font-size: 2rem;
+        font-family: 'Pacifico', cursive;
+        color: #B40F19;
+        line-height: 2rem;
+        
+    }
    .main_slider_content{
        padding:250px 0px 200px 0px;
        width:70%;
@@ -1024,18 +1031,19 @@ Author URI: http://bootstrapthemes.co
    ==========================================*/
    
    .figure-caption {
-       margin-left: 40px 
+       margin-left: 40px ;
+       color:#ffffff;
    }
    
-   .btn {
+   /*.btn {
        text-align:center;
        transition-y: 20px;
    
-   }
+   }*/
    
    
    .form-group{
-       display: block; /*bch yji l formulaire shih*/
+       display: block; /*bch yji l formulaire shih mch sghir*/
        width: 500px;
    }
    
@@ -1044,6 +1052,7 @@ Author URI: http://bootstrapthemes.co
        transform:translate(0px,5px);
    
    }
+
    
    
    
