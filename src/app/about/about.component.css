@@ -1,5 +1,6 @@
 table {
     width: 100%;
+    margin-top: 60px;
 }
 th {
     font-size:20px;
@@ -13,4 +14,10 @@ th {
     text-align: center;
     font-size:18px;
 
+ }
+ .fa-cart-arrow-down{
+    color: rgb(221, 218, 218);
+ }
+ .fa-cart-arrow-down:focus, .fa-cart-arrow-down:hover{
+    color:rgb(70, 66, 66);
  }

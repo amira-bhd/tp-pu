@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { bookFilterPipe } from './about/book-filter.pipe';
 import { StarComponent } from './star/star.component';
 import {HttpModule} from '@angular/http'
+import { RouterModule } from '@angular/router';
+import { BookDetailComponent } from './detail/book-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,13 +23,22 @@ import {HttpModule} from '@angular/http'
     CompteComponent,
     FooterComponent,
     bookFilterPipe,
-    StarComponent
+    StarComponent,
+    BookDetailComponent
+    
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot([
+      {path: 'book/:id', component :BookDetailComponent},
+      {path: '', }
+      
+    ])
+   
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

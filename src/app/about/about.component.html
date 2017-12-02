@@ -17,12 +17,17 @@
                         </div>-->
     
                           <!--les images men C:\Users\Amira\tp-pu\src\assets\images -->
-                          <input class="form-control mr-sm-2" type="search" [(ngModel)]='listFilter'/>
-                          <bout1><button class="btn btn-outline-default my-2 my-sm-0" type="submit">Search</button></bout1>
+                          <h4> Our Book Collection :</h4>
+                          
+                          <div align="center">
+                           <input class="form-control mr-sm-2" type="search" [(ngModel)]='listFilter'/>
+                          </div>
+                          
+                          <!--<bout1><button class="btn btn-outline-default my-2 my-sm-0" type="submit"  >Search</button></bout1>-->
                           
 
                            <div class='table-responsive'>
-                             <table class='table' *ngIf='books && books.length' >
+                             <table class='table' *ngIf='books && books.length'  width="100%">
                                <thead>
                                  <tr>
                                    <th>
@@ -31,21 +36,23 @@
                                      {{showImage?'Hide' : 'Show'}} Image</button>
                                    </th>
                                    <th>Book</th>
-                                   <th>Anthor</th>
-                                   <th>Available</th>
+                                   <!--<th>Author</th>
+                                   <th>Available</th>-->
                                    <th>Price</th>
-                                   <th>5 Stars Rating</th>
+                                   <th>Rating</th>
+                                   <th> Add to cart</th>
                                  </tr>
                                </thead>
                                <tbody>
                                  <tr *ngFor='let book of books |bookFilter:listFilter'>
                                    <td><img *ngIf='showImage' 
                                     [src]='book.imageUrl' alt="book" class="img-rounded" width="100" height="130" [title]='book.bookName'></td>
-                                   <td>{{book.bookName}}</td>
-                                   <td>{{book.author}}</td>
-                                   <td>{{book.releaseDate}}</td>
+                                   <td><a [routerLink]="['/book',book.bookId]">{{book.bookName}}</a></td>
+                                   <!--<td>{{book.author}}</td>
+                                   <td>{{book.releaseDate}}</td>-->
                                    <td>{{book.price |currency:'EUR':true:'1.2-2'}}</td>
-                                   <td><app-star [rating] = 'book.starRating' > </app-star></td>
+                                   <td align="right"><app-star [rating] = 'book.starRating' > </app-star></td>
+                                   <td><a href=""><i class="fa fa-cart-arrow-down fa-2x"></i></a></td>
 
                                  </tr>
                                </tbody>
