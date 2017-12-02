@@ -8,7 +8,9 @@ import { AboutComponent } from './about/about.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { CompteComponent } from './compte/compte.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { bookFilterPipe } from './about/book-filter.pipe';
+import { StarComponent } from './star/star.component';
+import {HttpModule} from '@angular/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,11 +19,15 @@ import { FooterComponent } from './footer/footer.component';
     AboutComponent,
     SubscribeComponent,
     CompteComponent,
-    FooterComponent
+    FooterComponent,
+    bookFilterPipe,
+    StarComponent
+
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent],

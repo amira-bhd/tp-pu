@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+}
+th {
+    font-size:20px;
+    font-family:Monospace;
+    text-align: center;
+    color: #B40F19
+    
+
+}
+ td{
+    text-align: center;
+    font-size:18px;
+
+ }

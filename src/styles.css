@@ -130,7 +130,7 @@ Author URI: http://bootstrapthemes.co
        background: #323232;
    }
    .form-control:focus {
-       border-color: #d6962c;
+       border-color: #f56363;
    }
    h1,
    h2,
@@ -158,7 +158,7 @@ Author URI: http://bootstrapthemes.co
        line-height: 3rem;
        margin-bottom: .9rem;
        text-transform:uppercase;
-       color:#3879D9;	
+       color:#f56363;	
    }
    h3 {
        font-weight: 300;
@@ -351,7 +351,7 @@ Author URI: http://bootstrapthemes.co
        display: inline-block;
        width: 8px;
        height: 8px;
-       border: 2px solid #f56363;
+       border: 2px solid #ED2E38;
        transform: rotate(45deg);
        margin-right: 4px;
    }
@@ -411,7 +411,7 @@ Author URI: http://bootstrapthemes.co
    
    
    button.btn-lg:hover{
-       background:#d6962c;
+       background:#ED2E38;
        color:#fff;
    }
    

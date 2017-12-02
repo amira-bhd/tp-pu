@@ -11,6 +11,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   }
-  listFilter: string = 'book'
+  listFilter: string = ''
+  
 
 }
