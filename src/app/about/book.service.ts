@@ -9,7 +9,7 @@ import 'rxjs/add/operator/do';
 
 @Injectable()
 export class BookService{
-    private _bookUrl='assets/books.json';
+    private _bookUrl='http://localhost:64369/api/book';
     constructor(private _http: Http){}
 
 
@@ -18,7 +18,6 @@ export class BookService{
         .map((response: Response) => <IBook[]> response.json())
         .do(data => console.log('All: '+ JSON.stringify(data)))
         .catch(this.handleError);
-        
     }
 
     private handleError(error:Response){

@@ -11,8 +11,11 @@ import { FooterComponent } from './footer/footer.component';
 import { bookFilterPipe } from './about/book-filter.pipe';
 import { StarComponent } from './star/star.component';
 import {HttpModule} from '@angular/http'
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { BookDetailComponent } from './detail/book-detail.component';
+import { APP_BASE_HREF } from '@angular/common';
+import { HomeComponent } from './home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,8 +27,9 @@ import { BookDetailComponent } from './detail/book-detail.component';
     FooterComponent,
     bookFilterPipe,
     StarComponent,
-    BookDetailComponent
-    
+    BookDetailComponent,
+    HomeComponent
+
 
   ],
   imports: [
@@ -33,14 +37,11 @@ import { BookDetailComponent } from './detail/book-detail.component';
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-      {path: 'book/:id', component :BookDetailComponent},
-      {path: '', }
-      
+      {path: '', component: HomeComponent, pathMatch: 'full'},
+      {path: 'book/:id', component: BookDetailComponent, pathMatch: 'full'}
     ])
-   
-    
   ],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA ]
 })

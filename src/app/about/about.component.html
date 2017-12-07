@@ -6,7 +6,7 @@
 
                          <!-- <div class="col-xs-4 col-sm-3 col-md-2 " *ngFor='let book of books' >
                             <a href="#" class="thumbnail">
-                            <figure class="figure">--> 
+                            <figure class="figure">-->
                               <!--property binding img [src]='book.imageUrl'-->
                               <!--<img [src]='book.imageUrl' alt="book" class="img-rounded" width="150" height="200" [title]='book.bookName'>
                             </figure>
@@ -15,23 +15,23 @@
                            <!-- <figcaption class="figure-caption">{{book.bookName}}</figcaption>
                             <figcaption class="figure-caption">{{book.price}} DT</figcaption>
                         </div>-->
-    
+
                           <!--les images men C:\Users\Amira\tp-pu\src\assets\images -->
                           <h4> Our Book Collection :</h4>
-                          
+
                           <div align="center">
                            <input class="form-control mr-sm-2" type="search" [(ngModel)]='listFilter'/>
                           </div>
-                          
+
                           <!--<bout1><button class="btn btn-outline-default my-2 my-sm-0" type="submit"  >Search</button></bout1>-->
-                          
+
 
                            <div class='table-responsive'>
                              <table class='table' *ngIf='books && books.length'  width="100%">
                                <thead>
                                  <tr>
                                    <th>
-                                     <button class='btn btn-primar' 
+                                     <button class='btn btn-primar'
                                      (click)='toggleImage()'>
                                      {{showImage?'Hide' : 'Show'}} Image</button>
                                    </th>
@@ -45,7 +45,7 @@
                                </thead>
                                <tbody>
                                  <tr *ngFor='let book of books |bookFilter:listFilter'>
-                                   <td><img *ngIf='showImage' 
+                                   <td><img *ngIf='showImage'
                                     [src]='book.imageUrl' alt="book" class="img-rounded" width="100" height="130" [title]='book.bookName'></td>
                                    <td><a [routerLink]="['/book',book.bookId]">{{book.bookName}}</a></td>
                                    <!--<td>{{book.author}}</td>
@@ -62,5 +62,5 @@
                         </div>
                      </div>
                  </div>
-            </section>      
+            </section>
           </about>
