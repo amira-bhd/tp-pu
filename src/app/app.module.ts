@@ -37,8 +37,9 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-      {path: '', component: HomeComponent, pathMatch: 'full'},
-      {path: 'book/:id', component: BookDetailComponent, pathMatch: 'full'}
+     
+      {path: 'book/:id/:n', component: BookDetailComponent},
+      {path: '', component: HomeComponent, pathMatch: 'full'}
     ])
   ],
   providers: [{provide: APP_BASE_HREF, useValue: '/'}],

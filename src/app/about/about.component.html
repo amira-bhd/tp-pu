@@ -20,7 +20,8 @@
                           <h4> Our Book Collection :</h4>
 
                           <div align="center">
-                           <input class="form-control mr-sm-2" type="search" [(ngModel)]='listFilter'/>
+                          <!-- <input class="form-control mr-sm-2" type="search" [(ngModel)]='listFilter'/>-->
+                           <input (keyup.enter)="search(event)" #event class="form-control mr-sm-2" type="search" />
                           </div>
 
                           <!--<bout1><button class="btn btn-outline-default my-2 my-sm-0" type="submit"  >Search</button></bout1>-->
@@ -47,7 +48,7 @@
                                  <tr *ngFor='let book of books |bookFilter:listFilter'>
                                    <td><img *ngIf='showImage'
                                     [src]='book.imageUrl' alt="book" class="img-rounded" width="100" height="130" [title]='book.bookName'></td>
-                                   <td><a [routerLink]="['/book',book.bookId]">{{book.bookName}}</a></td>
+                                   <td><a [routerLink]="['/book',book.bookID,book.bookName]">{{book.bookName}}</a></td>
                                    <!--<td>{{book.author}}</td>
                                    <td>{{book.releaseDate}}</td>-->
                                    <td>{{book.price |currency:'EUR':true:'1.2-2'}}</td>

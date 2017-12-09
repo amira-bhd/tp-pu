@@ -9,14 +9,29 @@ import { ActivatedRoute} from '@angular/router';
 
 })
 export class BookDetailComponent implements OnInit{
-    pageTitle: string ='Book Detail';
+    pageTitle: string ='Book ID';
+    name:string ='Book Name';
+    auteur:string ='Author';
+    releaseD:string ='Release Date';
+    description:string ='Description';
     book: IBook;
+
+
+    id:number;
+    n:string;
+
     constructor(private _route: ActivatedRoute){
 
     }
    ngOnInit():void {
-       let id = +this._route.snapshot.params['id'];
-       this.pageTitle += `: ${id}`;
+       //let id = +this._route.snapshot.params['id'];
+      // this.pageTitle += `: ${id}`
+       this._route.params.subscribe(params => {this.id = params['id']; this.n = params['n']});
+
+       
+
+       console.log(this.id+"/"+this.n);
+     
        
    }
 }
