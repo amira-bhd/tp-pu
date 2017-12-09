@@ -7,3 +7,7 @@
 #background{
     min-height: 400px;
 }
+
+#conteneur {width:760px; margin:0 auto;}
+#sidebar {position:absolute; width:170px;}
+#contenu {margin-left:170px;}

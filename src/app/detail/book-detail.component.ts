@@ -14,11 +14,18 @@ export class BookDetailComponent implements OnInit{
     auteur:string ='Author';
     releaseD:string ='Release Date';
     description:string ='Description';
+    url:string='imageUrl';
     book: IBook;
 
 
     id:number;
     n:string;
+    a:string;
+    r:string;
+    d:string;
+    p:number;
+    u:string;
+
 
     constructor(private _route: ActivatedRoute){
 
@@ -26,7 +33,7 @@ export class BookDetailComponent implements OnInit{
    ngOnInit():void {
        //let id = +this._route.snapshot.params['id'];
       // this.pageTitle += `: ${id}`
-       this._route.params.subscribe(params => {this.id = params['id']; this.n = params['n']});
+       this._route.params.subscribe(params => {this.id = params['id'], this.n = params['n'],this.a = params['a'],this.r = params['r'],this.d = params['d'],this.p = params['p'],this.u = params['u'];});
 
        
 

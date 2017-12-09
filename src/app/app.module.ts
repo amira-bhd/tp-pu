@@ -38,7 +38,7 @@ import { HomeComponent } from './home/home.component';
     HttpModule,
     RouterModule.forRoot([
      
-      {path: 'book/:id/:n', component: BookDetailComponent},
+      {path: 'book/:id/:n/:a/:d/:r/:p/:u', component: BookDetailComponent},
       {path: '', component: HomeComponent, pathMatch: 'full'}
     ])
   ],
