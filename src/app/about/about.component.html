@@ -53,7 +53,8 @@
                                    <td>{{book.releaseDate}}</td>-->
                                    <td>{{book.price |currency:'EUR':true:'1.2-2'}}</td>
                                    <td align="right"><app-star [rating] = 'book.starRating' > </app-star></td>
-                                   <td><a href=""><i class="fa fa-cart-arrow-down fa-2x"></i></a></td>
+                                   <td><i class="fa fa-cart-arrow-down fa-2x"
+                                    (click)='Storage(book.bookID,book.bookName)'></i></td>
 
                                  </tr>
                                </tbody>

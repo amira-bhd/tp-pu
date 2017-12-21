@@ -12,6 +12,13 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
   listFilter: string = ''
+
+  getStore(){
+
+var test= localStorage.getItem("user");
+console.log(test);
+
+  }
   
 
 }
