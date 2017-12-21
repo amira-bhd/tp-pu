@@ -4,20 +4,31 @@
                     <div class="row">
                         <div class="main_mobail_apps_content wow zoomIn">
                             <div class="col-md-5 col-sm-12 text-center">
-                                <!--<img src="assets/images/iphone.png" alt="" />-->
+                               
 
                             </div>
-                            <div class="col-md-7 col-sm-12">
+                            
+                                <h4> Votre panier</h4>
+                                <h5>Cliquez sur le panier pour voir son contenu</h5>
+                                <i class="fa fa-cart-arrow-down fa-2x"
+                                    (click)='getStore()'></i>
 
-                                <h4> Hello Mr .. </h4>
-                                <!--<div class="single_monail_apps_text">
-                                    <h4> Happy to Announce </h4>
-                                    <h1>Mobile App <span>is Available in every OS platform.</span></h1>
+                                    <table class='table' *ngIf='panier && panier.length'  width="100%">
+                                        <thead>
+                                          <tr>
+                                            <th>bookID</th>
+                                            <th>bookName</th>                                            
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr *ngFor='let p of panier'>
+                                            <td>{{p.id}}</td>
+                                            <td>{{p.name}}</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
 
-                                    <a href=""><img src="assets/images/google.png" alt="" /></a>
-                                    <a href=""><img src="assets/images/apps.png" alt="" /></a>
-                                </div>-->
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

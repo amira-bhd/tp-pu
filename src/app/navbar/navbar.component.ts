@@ -13,12 +13,7 @@ export class NavbarComponent implements OnInit {
   }
   listFilter: string = ''
 
-  getStore(){
-
-var test= localStorage.getItem("user");
-console.log(test);
-
-  }
+  
   
 
 }
