@@ -822,7 +822,7 @@ Author URI: http://bootstrapthemes.co
    }
    
    .ourPakeg{
-       background:url(images/newsbg.jpg) no-repeat center top scroll;
+      
      -moz-background-size: cover;
      -webkit-background-size: cover;
      -o-background-size: cover;
@@ -869,7 +869,7 @@ Author URI: http://bootstrapthemes.co
    /* Mobail Apps Section css */
    
    .mobailapps{
-       background:url(images/bookBg.png) top center no-repeat scroll;
+       background:url(images/bib.jpg) top center no-repeat scroll;
        -moz-background-size: cover;
        -webkit-background-size: cover;
        -o-background-size: cover;

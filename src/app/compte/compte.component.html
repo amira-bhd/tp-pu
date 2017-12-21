@@ -9,9 +9,11 @@
                             </div>
                             
                                 <h4> Votre panier</h4>
-                                <h5>Cliquez sur le panier pour voir son contenu</h5>
+                                <h5>Cliquez sur le panier pour voir son contenu et sur la corbeille pour le vider</h5>
                                 <i class="fa fa-cart-arrow-down fa-2x"
                                     (click)='getStore()'></i>
+                                <i class="glyphicon glyphicon-trash"
+                                    (click)='viderPanier()'></i>
 
                                     <table class='table' *ngIf='panier && panier.length'  width="100%">
                                         <thead>

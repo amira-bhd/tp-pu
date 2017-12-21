@@ -15,12 +15,13 @@ panier: livre[];
 
 
   getStore(){
-    
     var test= localStorage.getItem("user");
     console.log(test);
     this.panier = JSON.parse(test);
   
-    
       }
-
+   viderPanier():void
+   {this.panier=[];
+    localStorage.setItem("user",JSON.stringify(this.panier));
+      }
 }
